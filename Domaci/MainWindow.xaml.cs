@@ -94,11 +94,11 @@ namespace Domaci
             else
             {
                 Imenik SelectItem = (Imenik)Datagrd2.SelectedItem;
-                SelectItem.Ime = tmpIme;
-                SelectItem.Broj = tmpBroj;
+                Metode.Provera(Lista, SelectItem.Broj, out Imenik Izmena);
+                Izmena.Ime = tmpIme;
+                Izmena.Broj = tmpBroj;
                 ImeII.Text = null;
                 BrojII.Text = null;
-                SelectItem = null;
             }
         }
     }
